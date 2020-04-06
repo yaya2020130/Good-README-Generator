@@ -1,6 +1,6 @@
 # README
 
-  ## It is a project on how  to prepare a readme
+  ## It is a project on how to prepare a readme.
 
 
 
@@ -39,11 +39,11 @@
 
    ---
 
-  #### myself
+  #### MYSEL
 
 
 
-  #### by running it
+  #### By running the app
   
 
   ---
