@@ -1,29 +1,40 @@
 # Title
 ## Description
 
-### table of contents 
+## Table of contents 
+ 
+
+
+   * [Instalation]
+
+   *  [Usage]
+
+   *  [licence]
+
+   *  [Tests]
+   *  [Quesions]
+
+## Instalation
+
+###### To install nessasry dependencies run the the  following command:
+## Usage
+### Test 
+
+
+
 ---
 
-### instalation
-
-#### usage
---- 
-
-#### licence 
 
 
----
+#### Contributing
 
 
 
-#### contributing
-
-
-
-#### test
+#### Test
 
 
 ---
+ ####  Quesions
 
 
-#### email
+

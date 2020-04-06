@@ -6,9 +6,11 @@ const axios=require("axios")
 const yaya = `# title
 ## description
 ----
-### table of contents 
+## Table of contents 
+
+
 ---
-### instalation
+### Instalation
 --
 #### usage
 
@@ -32,40 +34,50 @@ const yaya = `# title
 
 
 
-// collect user inpute 
 inquirer
 .prompt([
   { 
     type:"input",
     name:"github",
      message:"github username?"
+    
   },
+
+
+  { 
+    type:"input",
+    name:"title",
+     message:"what is the title ?"
+  },
+
   {
     type:"input",
     name:"description",
    
-    message:"do you want a description?"
+    message:"what kind of project is this?"
   
   },
   
   {
     type:"input",
-    name:"table of contents",
-    message:"what do you want include  in your table ?"
+    name:"Tableofcontents ",
+    message:"what do you want to include in your Table of contents ?"
   
   },
 
   {
-    type:"input",
-    name:"instaltion",
-    message:"what do you like to call your this section?"
+    type:"list",
+    name:"Instalation",
+    choices:['npm init','downloading','buying ne app'],
+    message:"what kind of instalation needed?"
  
   },
 
   {
-    type:"input",
+    type:"list",
     name:"usage",
-    message:"what do you want this to be used for ?"
+    choices:['install all the dependencies','npm i inquirer ','all'],
+    message:"how do you install the software?"
  
   },
 
@@ -79,7 +91,7 @@ inquirer
 
   {
     type:"input",
-    name:"contributers",
+    name:"contributing",
     message:"who conrtibuted in the project ?"
  
   },
@@ -87,7 +99,7 @@ inquirer
   {
     type:"input",
     name:"test",
-    message:"what do you want this to be used for ?"
+    message:"how do you test the app?"
  
   },
 
@@ -100,21 +112,32 @@ inquirer
    },
   
   ]).then(function(response){
-    const yaya = `# ${response.username}
+    
+    const yaya = `# ${response.title}
 
   ## ${response.description}
 
 
 
 
-  ### ${response.tableofcontents}
+  ## ${response.Tableofcontents}
+       
 
 
-  ---
+  *  [Instalation]
+
+  *  [Usage]
+
+  *  [licence]
+
+  *  [Tests]
+  *  [Quesions]
 
 
 
-  ### ${response.instalation}
+
+
+  ### ${response.Instalation}
 
 
 
@@ -145,7 +168,7 @@ inquirer
   #### ${response.email}`
 
 
-  
+
   fs.writeFile("Readme.md",yaya,err=>{
     if(err){
       return console.log(error)
@@ -177,27 +200,3 @@ fs.appendFile("Readme.md",picAndEmail,(err)=>{
 
 
 
-
-
-
-  //   const queryUrl= `https://api.github.com/users/${username}?
-  
-  // console.log(queryUrl)
-  
-  
-  
-  
-  
-  // // cons 
-  
-  
-  
-  // // console.log(myHTML);
-  
-  // // fs.writeFile('index.html',myHTML,err=>{
-  // // if(err){
-  // //   return console.log(error)
-  // // }
-  // // console.log("yaya")
-  // // })
-  // // });

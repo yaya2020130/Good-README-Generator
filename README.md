@@ -1,23 +1,33 @@
-# undefined
+# README
 
-  ## Title
-
-
-
-
-  ### undefined
-
-
-  ---
-
-
-
-  ### undefined
+  ## It is a project on how  to prepare a readme
 
 
 
 
-  #### Usage
+  ## undefined
+       
+
+
+  *  [Instalation]
+
+  *  [Usage]
+
+  *  [licence]
+
+  *  [Tests]
+  *  [Quesions]
+
+
+
+
+
+  ### npm init
+
+
+
+
+  #### npm i inquirer 
 
 
   --- 
@@ -29,15 +39,15 @@
 
    ---
 
-  #### undefined
+  #### myself
 
 
 
-  #### Readme
+  #### by running it
   
 
   ---
   
 
 
-  #### ![Avatar}(https://avatars3.githubusercontent.com/u/11791361?v=4)
+  #### anbesie.yg@gmail.com![Avatar}(https://avatars3.githubusercontent.com/u/11791361?v=4)
