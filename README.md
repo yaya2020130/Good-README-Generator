@@ -1,6 +1,6 @@
-# Readme
+# README
 
-  ## a project on readme
+  ## PREPARING A README
 
 
 
@@ -9,9 +9,9 @@
 
   * [Instalation](#Instalation)
     
-  * [Instalation](#Instalation)
+    * [Instalation](#Instalation)
     
-  * [Usage](#Usage)
+    * [Usage](#Usage)
     
     
        
@@ -33,11 +33,11 @@
 
    ---
 
-  #### myself
+  #### MYSELF
 
 
 
-  #### by using jest
+  #### JEST
   
 
   ---
