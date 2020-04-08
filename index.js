@@ -1,7 +1,7 @@
 // inpute inquirer pacakage
-const fs =require("fs")
+const fs = require("fs")
 const inquirer = require("inquirer")
-const axios=require("axios")
+const axios = require("axios")
 
 const yaya = `# title
 ## description
@@ -35,84 +35,92 @@ const yaya = `# title
 
 
 inquirer
-.prompt([
-  { 
-    type:"input",
-    name:"github",
-     message:"github username?"
+  .prompt([
+    {
+      type: "input",
+      name: "github",
+      message: "github username?"
+
+    },
+
+
+    {
+      type: "input",
+      name: "title",
+      message: "what is the title ?"
+    },
+
+    {
+      type: "input",
+      name: "description",
+
+      message: "what kind of project is this?"
+
+    },
+
+    {
+      type: "checkbox",
+      name: "Tableofcontents",
+      message: "what do you want to include in your Table of contents ?",
+      choices: ['Instalation', 'Instalation', 'Usage']
+
+
+
+
+    },
+
+    {
+      type: "list",
+      name: "Instalation",
+      choices: ['npm init', 'downloading', 'buying ne app'],
+      message: "what kind of instalation needed?"
+
+    },
+
+    {
+      type: "list",
+      name: "usage",
+      choices: ['install all the dependencies', 'npm i inquirer ', 'all'],
+      message: "how do you install the software?"
+
+    },
+
+
+    {
+      type: "input",
+      name: "license",
+      message: "what license do you want ?"
+
+    },
+
+    {
+      type: "input",
+      name: "contributing",
+      message: "who conrtibuted in the project ?"
+
+    },
+
+    {
+      type: "input",
+      name: "test",
+      message: "how do you test the app?"
+
+    },
+
+
+    {
+      type: "input",
+      name: "email",
+      message: "what is your email?"
+
+    },
+
+  ]).then(function (response) {
+    let toc = '';
+    response.Tableofcontents.map(a => toc += `* [${a}](#${a})
     
-  },
-
-
-  { 
-    type:"input",
-    name:"title",
-     message:"what is the title ?"
-  },
-
-  {
-    type:"input",
-    name:"description",
-   
-    message:"what kind of project is this?"
-  
-  },
-  
-  {
-    type:"input",
-    name:"Tableofcontents ",
-    message:"what do you want to include in your Table of contents ?"
-  
-  },
-
-  {
-    type:"list",
-    name:"Instalation",
-    choices:['npm init','downloading','buying ne app'],
-    message:"what kind of instalation needed?"
- 
-  },
-
-  {
-    type:"list",
-    name:"usage",
-    choices:['install all the dependencies','npm i inquirer ','all'],
-    message:"how do you install the software?"
- 
-  },
-
-
-  {
-    type:"input",
-    name:"license",
-    message:"what license do you want ?"
- 
-  },
-
-  {
-    type:"input",
-    name:"contributing",
-    message:"who conrtibuted in the project ?"
- 
-  },
-
-  {
-    type:"input",
-    name:"test",
-    message:"how do you test the app?"
- 
-  },
-
-
-   {
-     type:"inpute",
-     name:"email",
-     message:"what is your email?"
-  
-   },
-  
-  ]).then(function(response){
-    
+    `)
+    console.log(response.Tableofcontents)
     const yaya = `# ${response.title}
 
   ## ${response.description}
@@ -120,22 +128,10 @@ inquirer
 
 
 
-  ## ${response.Tableofcontents}
+  ## Table of Contents
+
+  ${toc}
        
-
-
-  *  [Instalation]
-
-  *  [Usage]
-
-  *  [licence]
-
-  *  [Tests]
-  *  [Quesions]
-
-
-
-
 
   ### ${response.Instalation}
 
@@ -169,34 +165,35 @@ inquirer
 
 
 
-  fs.writeFile("Readme.md",yaya,err=>{
-    if(err){
-      return console.log(error)
-    }
-    console.log("yaya")
+    fs.writeFile("Readme.md", yaya, err => {
+      if (err) {
+        return console.log(error)
+      }
+      console.log("yaya")
     })
 
-    const queryUrl =`https://api.github.com/users/${response.username}?`;
-axios.get(queryUrl).then(function(res){
-const avatar = res.data.avatar_url;
-let email=(res.data.email) ? res.data.email :response.email;
-const picAndEmail=`![Avatar}(${avatar})`
+    const queryUrl = `https://api.github.com/users/${response.username}?`;
+    axios.get(queryUrl).then(function (res) {
+      const avatar = res.data.avatar_url;
+      let email = (res.data.email) ? res.data.email : response.email;
+      const picAndEmail = `![Avatar](${avatar})`
 
 
-fs.appendFile("Readme.md",picAndEmail,(err)=>{
-  if(err){
-    throw err;
+      fs.appendFile("Readme.md", picAndEmail, (err) => {
+        if (err) {
+          throw err;
 
-  }
+        }
 
-  console.log("readme ready")
-  })
-  
-})   
- 
-});
+        console.log("readme ready")
+      })
 
-  
+    })
+
+  });
+
+
+
 
 
 

@@ -1,33 +1,27 @@
-# README
+# Readme
 
-  ## It is a project on how to prepare a readme.
-
-
+  ## a project on readme
 
 
-  ## undefined
+
+
+  ## Table of Contents
+
+  * [Instalation](#Instalation)
+    
+  * [Instalation](#Instalation)
+    
+  * [Usage](#Usage)
+    
+    
        
-
-
-  *  [Instalation]
-
-  *  [Usage]
-
-  *  [licence]
-
-  *  [Tests]
-  *  [Quesions]
-
-
-
-
 
   ### npm init
 
 
 
 
-  #### npm i inquirer 
+  #### all
 
 
   --- 
@@ -39,15 +33,15 @@
 
    ---
 
-  #### MYSEL
+  #### myself
 
 
 
-  #### By running the app
+  #### by using jest
   
 
   ---
   
 
 
-  #### anbesie.yg@gmail.com![Avatar}(https://avatars3.githubusercontent.com/u/11791361?v=4)
+  #### ![Avatar](https://avatars3.githubusercontent.com/u/11791361?v=4)
